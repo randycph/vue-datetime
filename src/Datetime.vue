@@ -216,8 +216,7 @@ export default {
         datetime = startOfDay(datetime)
       }
 
-      const value = datetime ? datetime.toISO() : null
-      this.datetime !== value ? this.$emit('input', value) : null
+      this.$emit('input', datetime ? this.datetime.toISO() : '')
     },
     open (event) {
       event.target.blur()
